@@ -4,10 +4,10 @@ class Login extends StatefulWidget {
   const Login({super.key});
 
   @override
-  State<Login> createState() => _LoginState();
+  State<Login> createState() => _Login();
 }
 
-class _LoginState extends State<Login> {
+class _Login extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(       

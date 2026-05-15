@@ -1,4 +1,4 @@
-import 'package:app_chat/cadastro.dart';
+import 'cadastro.dart';
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 

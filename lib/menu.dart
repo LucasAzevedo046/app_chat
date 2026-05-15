@@ -4,10 +4,10 @@ class Menu extends StatefulWidget {
   const Menu({super.key});
 
   @override
-  State<Menu> createState() => _MenuState();
+  State<Menu> createState() => _Menu();
 }
 
-class _MenuState extends State<Menu> {
+class _Menu extends State<Menu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(       

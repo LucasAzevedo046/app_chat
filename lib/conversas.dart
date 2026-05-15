@@ -4,10 +4,10 @@ class Conversas extends StatefulWidget {
   const Conversas({super.key});
 
   @override
-  State<Conversas> createState() => _ConversasState();
+  State<Conversas> createState() => _Conversas();
 }
 
-class _ConversasState extends State<Conversas> {
+class _Conversas extends State<Conversas> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(       
