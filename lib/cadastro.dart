@@ -16,7 +16,8 @@ String? urlImagem;
 class _Cadastro extends State<Cadastro> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(       
+    return Scaffold(  
+      appBar: AppBar(title: Text('Chat Etec'),),     
         body: Column(children: [
           Text('\n'),
           Material(
