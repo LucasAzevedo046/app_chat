@@ -1,3 +1,5 @@
+import 'package:app_chat/login.dart';
+
 import 'cadastro.dart';
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -7,7 +9,7 @@ void main() async {
     url: 'https://rymyvwplnagzgfyliufn.supabase.co',
     anonKey: 'sb_publishable_zX5EyDMy3WUqTAjjKTNarg_rtuluZ4U'
   );
-  runApp(const MaterialApp(title: 'Flutter', home: Cadastro()));
+  runApp(const MaterialApp(title: 'Flutter', home: Login()));
 }
 
     // app de chat DS3 Etec

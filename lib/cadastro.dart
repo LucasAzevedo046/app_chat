@@ -89,7 +89,7 @@ class _Cadastro extends State<Cadastro> {
 
   btnCadastrar() {
     return ElevatedButton(
-      onPressed: () => mensagem(), 
+      onPressed: () => mensagem(),
       child: Text('Cadastrar'));
   }
 
@@ -158,7 +158,7 @@ class _Cadastro extends State<Cadastro> {
       context: context, 
       builder: (context) => AlertDialog(
         title: Text('DS Etec'),
-        content: Text('texto'),
+        content: Text(texto),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context), 
