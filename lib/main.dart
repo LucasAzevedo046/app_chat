@@ -1,6 +1,5 @@
-import 'package:app_chat/login.dart';
-
-import 'cadastro.dart';
+//import 'cadastro.dart';
+import 'login.dart';
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 

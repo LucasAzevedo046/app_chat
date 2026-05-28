@@ -5,7 +5,6 @@ import 'menu.dart';
 import 'usuario.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
-final supabase = Supabase.instance.client;
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -13,6 +12,9 @@ class Login extends StatefulWidget {
   @override
   State<Login> createState() => _Login();
 }
+
+final supabase = Supabase.instance.client;
+
 
 class _Login extends State<Login> {
   @override
@@ -60,7 +62,7 @@ class _Login extends State<Login> {
 
   TextButton textoCadastro() {
     return TextButton(
-      onPressed: () => Navigator.pop(context,
+      onPressed: () => Navigator.push(context,
       MaterialPageRoute(builder: (context) => Cadastro())),
       child: Text('Não tem login? Clique aqui para se cadastrar'));
   }
@@ -81,7 +83,7 @@ class _Login extends State<Login> {
     try {
       final response = await supabase.auth.signInWithPassword(
         email: email, 
-        password: senha
+        password: senha,
       );
 
       if (response.user != null) {
