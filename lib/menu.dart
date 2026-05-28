@@ -24,7 +24,11 @@ class Menu extends StatelessWidget {
           ]
         ),   
       ),  
+<<<<<<< HEAD
       body: TabBarView(children: [Contatos(),Conversas()]),
+=======
+      body: TabBarView(children: [Contatos(), Conversas()]),
+>>>>>>> 0248be67e82998aeb270202339006f048a103a20
 	  ),
     );
   }

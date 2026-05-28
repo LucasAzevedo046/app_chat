@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import 'package:app_chat/cadastro.dart';
 import 'package:app_chat/login.dart';
+=======
+//import 'cadastro.dart';
+import 'login.dart';
+>>>>>>> 0248be67e82998aeb270202339006f048a103a20
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
