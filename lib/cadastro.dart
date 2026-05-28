@@ -16,18 +16,30 @@ String? urlImagem;
 class _CadastroState extends State<Cadastro> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(       
-        body: Column(children: [
-		caixaNome(),
-    caixaEmail(),
-    caixaSenha(),
-    caixaConfirma(),
-    btnCadastro(),
+    return Scaffold( 
+      appBar: AppBar(title: Text('Chat Etec')),      
+        body: SingleChildScrollView(
+          child:  Column(
+            children: [
+              Text('\n'),
+              Material(
+                borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                elevation: 10,
+                child: Padding(
+                  padding: EdgeInsets.all(20.0),
+                  child:  Image.asset("imagens/logo.png", height: 100, width: 100))),
+                  Padding(padding: EdgeInsets.all(15), child: caixaNome()),
+                  Padding(padding: EdgeInsets.all(15), child: caixaEmail()),
+                  Padding(padding: EdgeInsets.all(15), child: caixaSenha()),
+                  Padding(padding: EdgeInsets.all(15), child: caixaConfirma()),
+                  btnCadastro(),
+            ],
+          ),
+        ),
+      );
 
-	])
-    );
+
   }
-
 
   TextEditingController txtEmail = TextEditingController();
   TextEditingController txtNome = TextEditingController();
@@ -38,7 +50,7 @@ class _CadastroState extends State<Cadastro> {
       return TextField(
         controller: txtNome,
         decoration:  InputDecoration(
-          labelText: 'Informe seu nome:',
+          labelText: 'Nome:',
           border: OutlineInputBorder(),
         ),
       );
@@ -49,7 +61,7 @@ class _CadastroState extends State<Cadastro> {
       controller: txtEmail,
       keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
-        labelText: 'Informe seu email:',
+        labelText: 'Email:',
         border: OutlineInputBorder(),
       ),
     );
@@ -136,13 +148,6 @@ class _CadastroState extends State<Cadastro> {
     });
   }
 
-  Future<void> buscar() async{
-    final response = await supabase.from('alunos').select().order('nome');
-
-    setState((){
-        alunos = response;
-    });
-  }
   // Função para adicionar dados do aluno e curso
   Future<void> adicionar(String nome, String senha, String confirma) async{
    if (nome == "" || senha == "" || confirma == ""){
@@ -176,4 +181,18 @@ class _CadastroState extends State<Cadastro> {
 
   }
 
+  caixaMensagem(String texto){
+    return showDialog(
+      context: context, 
+      builder: (context) => AlertDialog(
+        title: Text('DS Etec'),
+        content: Text(texto),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context), 
+            child: Text("OK")
+          ),
+        ],
+      ));
+  }
 }
